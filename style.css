@@ -17,58 +17,67 @@ body {
 }
 
 .title {
+  font-size: 4rem;
   text-align: center;
-  margin: 4rem;
+}
+
+@media only screen and (max-width: 30em) {
+  .title {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+  }
 }
 
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 10rem;
+}
+
+@media only screen and (max-width: 30em) {
+  .container {
+    margin-top: 2rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .choice {
-  height: 15rem;
-  width: 15rem;
-  font-size: 2rem;
-  display: inline-block;
-  padding: 4rem;
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   cursor: pointer;
-  font-weight: 900;
+  font-size: 12rem;
 }
 
-.rock {
-  background-color: blue;
-}
-
-.scissors {
-  background-color: red;
-}
-
-.paper {
-  background-color: green;
+@media only screen and (max-width: 30em) {
+  .choice {
+    margin-bottom: 2rem;
+    font-size: 10rem;
+  }
 }
 
 .outcome {
-  font-weight: 700;
-  margin-top: 2rem;
+  font-weight: 900;
+  margin-top: 8rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
-.expand {
+@media only screen and (max-width: 30em) {
+  .outcome {
+    margin-top: 4rem;
+  }
+}
+
+.expand-js {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }

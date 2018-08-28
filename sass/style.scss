@@ -16,48 +16,43 @@ body {
 }
 
 .title {
+  font-size: 4rem;
   text-align: center;
-  margin: 4rem;
+  @media only screen and (max-width: 30em) {
+    width: min-content;
+  }
 }
 
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin-top: 10rem;
+  @media only screen and (max-width: 30em) {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .choice {
-  height: 15rem;
-  width: 15rem;
-  font-size: 2rem;
-  display: inline-block;
-  padding: 4rem;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
-  font-weight: 900;
-}
-
-.rock {
-  background-color: blue;
-}
-
-.scissors {
-  background-color: red;
-}
-
-.paper {
-  background-color: green;
+  font-size: 12rem;
+  @media only screen and (max-width: 30em) {
+    margin-bottom: 2rem;
+    font-size: 10rem;
+  }
 }
 
 .outcome {
-  font-weight: 700;
-  margin-top: 2rem;
+  font-weight: 900;
+  margin-top: 8rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  @media only screen and (max-width: 30em) {
+    margin-top: 4rem;
+  }
 }
 
-.expand {
+.expand-js {
   transform: scale(1.2);
 }

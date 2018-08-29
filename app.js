@@ -6,9 +6,9 @@ const outcome = document.querySelector(".outcome");
 choices.forEach(choice => {
   choice.addEventListener("click", function(e) {
     // 1. When user clicks on div, it will expand
-    e.target.classList.add("expand-js");
+    e.target.classList.add("pick-js");
     // This stores the value from font-awesomes class
-    const userChoice = e.target.classList[1].slice(8);
+    const userChoice = e.target.id;
     console.log(userChoice);
     const computerChoice = calcComputerChoice();
     // Need to bind arguments for promise to return the correct value... Do not need to set the value of 'this'... Any value will work for first argument
@@ -34,6 +34,7 @@ function calcComputerChoice() {
   return choices[index];
 }
 
+// Do not need to invoke reject since setTimeout will never fail
 function myPromise(func, time) {
   const promise = new Promise(function(resolve, reject) {
     setTimeout(function() {
@@ -46,24 +47,24 @@ function myPromise(func, time) {
 
 function calcWinner(usrChoice, cmpChoice) {
   if (usrChoice === cmpChoice) {
-    return `Users ${usrChoice} and Computers ${cmpChoice} are the same... It's a Tie!`;
+    return `Players ${usrChoice} and Computers ${cmpChoice} are the same... It's a Tie!`;
   } else if (usrChoice === "scissors" && cmpChoice === "paper") {
-    return `Users ${usrChoice} beats Computers ${cmpChoice}... User wins!`;
+    return `Players ${usrChoice} beats Computers ${cmpChoice}... Player wins!`;
   } else if (cmpChoice === "scissors" && usrChoice === "paper") {
-    return `Computers ${cmpChoice} beats Users ${usrChoice}... Computer wins!`;
+    return `Computers ${cmpChoice} beats Players ${usrChoice}... Computer wins!`;
   } else if (usrChoice === "paper" && cmpChoice === "rock") {
-    return `Users ${usrChoice} beats Computers ${cmpChoice}... User wins!`;
+    return `Players ${usrChoice} beats Computers ${cmpChoice}... Player wins!`;
   } else if (cmpChoice === "paper" && usrChoice === "rock") {
-    return `Computers ${cmpChoice} beats Users ${usrChoice}... Computer wins!`;
+    return `Computers ${cmpChoice} beats Players ${usrChoice}... Computer wins!`;
   } else if (usrChoice === "rock" && cmpChoice === "scissors") {
-    return `Users ${usrChoice} beats Computers ${cmpChoice}... User wins!`;
+    return `Players ${usrChoice} beats Computers ${cmpChoice}... Player wins!`;
   } else if (cmpChoice === "rock" && usrChoice === "scissors") {
-    return `Computers ${cmpChoice} beats Users ${usrChoice}... Computer wins!`;
+    return `Computers ${cmpChoice} beats Players ${usrChoice}... Computer wins!`;
   }
 }
 
 function removeExpand(e) {
-  e.target.classList.remove("expand-js");
+  e.target.classList.remove("pick-js");
 }
 
 function loadingWinner() {

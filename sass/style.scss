@@ -1,3 +1,7 @@
+$bg-color: #f0f5f9;
+$color-primary: #52616a;
+$color-secondary: #1e2022;
+
 *::before,
 *::after,
 * {
@@ -12,13 +16,15 @@ html {
 
 body {
   font-family: "Courier New", Courier, monospace;
-  background: #eee;
+  background: $bg-color;
 }
 
 .title {
   font-size: 4rem;
-  text-align: center;
+  color: $color-primary;
   @media only screen and (max-width: 30em) {
+    text-align: center;
+    font-size: 3.5rem;
     width: min-content;
   }
 }
@@ -26,7 +32,7 @@ body {
 .container {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 10rem;
+  margin-top: 8rem;
   @media only screen and (max-width: 30em) {
     margin-top: 2rem;
     flex-direction: column;
@@ -37,9 +43,13 @@ body {
 .choice {
   cursor: pointer;
   font-size: 12rem;
+  color: $color-secondary;
   @media only screen and (max-width: 30em) {
     margin-bottom: 2rem;
-    font-size: 10rem;
+    font-size: 8rem;
+  }
+  &:hover {
+    color: $color-primary;
   }
 }
 
@@ -47,12 +57,13 @@ body {
   font-weight: 900;
   margin-top: 8rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: $color-primary;
   @media only screen and (max-width: 30em) {
     margin-top: 4rem;
   }
 }
 
-.expand-js {
-  transform: scale(1.2);
+.pick-js {
+  transform: scale(1.2) rotate(10deg);
 }

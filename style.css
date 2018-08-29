@@ -13,16 +13,18 @@ html {
 
 body {
   font-family: "Courier New", Courier, monospace;
-  background: #eee;
+  background: #f0f5f9;
 }
 
 .title {
   font-size: 4rem;
-  text-align: center;
+  color: #52616a;
 }
 
 @media only screen and (max-width: 30em) {
   .title {
+    text-align: center;
+    font-size: 3.5rem;
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
@@ -36,7 +38,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 
 @media only screen and (max-width: 30em) {
@@ -55,20 +57,26 @@ body {
 .choice {
   cursor: pointer;
   font-size: 12rem;
+  color: #1e2022;
 }
 
 @media only screen and (max-width: 30em) {
   .choice {
     margin-bottom: 2rem;
-    font-size: 10rem;
+    font-size: 8rem;
   }
+}
+
+.choice:hover {
+  color: #52616a;
 }
 
 .outcome {
   font-weight: 900;
   margin-top: 8rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  color: #52616a;
 }
 
 @media only screen and (max-width: 30em) {
@@ -77,8 +85,8 @@ body {
   }
 }
 
-.expand-js {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+.pick-js {
+  -webkit-transform: scale(1.2) rotate(10deg);
+          transform: scale(1.2) rotate(10deg);
 }
 /*# sourceMappingURL=style.css.map */

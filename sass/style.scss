@@ -34,7 +34,7 @@ body {
   justify-content: space-evenly;
   margin-top: 8rem;
   @media only screen and (max-width: 30em) {
-    margin-top: 2rem;
+    margin-top: 1rem;
     flex-direction: column;
     align-items: center;
   }
@@ -57,10 +57,11 @@ body {
   font-weight: 900;
   margin-top: 8rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: $color-primary;
   @media only screen and (max-width: 30em) {
-    margin-top: 4rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
   }
 }
 

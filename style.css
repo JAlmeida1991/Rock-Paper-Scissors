@@ -43,7 +43,7 @@ body {
 
 @media only screen and (max-width: 30em) {
   .container {
-    margin-top: 2rem;
+    margin-top: 1rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -75,13 +75,14 @@ body {
   font-weight: 900;
   margin-top: 8rem;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #52616a;
 }
 
 @media only screen and (max-width: 30em) {
   .outcome {
-    margin-top: 4rem;
+    margin-top: 1rem;
+    font-size: 2.5rem;
   }
 }
 

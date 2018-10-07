@@ -14,16 +14,41 @@
 
 
 <body>
-    <div class="container">
-        <h1 class="title">Rock Paper Scissors</h1>
-    </div>
+
+    <h1 class="title">Rock Paper Scissors</h1>
+
 
     <div class="container">
         <i class="far fa-hand-rock choice" id='rock'></i>
         <i class="far fa-hand-paper choice" id='paper'></i>
         <i class="far fa-hand-scissors choice" id='scissors'></i>
     </div>
+
+    <table class="scoreboard">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Win</th>
+                <th>Lose</th>
+                <th>Tie</th>
+            </tr>
+            <tr>
+                <td class="player">Player</td>
+                <td id='p-win'>0</td>
+                <td id='p-lose'>0</td>
+                <td id='p-tie'>0</td>
+            </tr>
+            <tr>
+                <td class="computer"> Computer</td>
+                <td id='c-win'>0</td>
+                <td id='c-lose'>0</td>
+                <td id='c-tie'>0</td>
+            </tr>
+        </thead>
+    </table>
     <p class="outcome"></p>
+
+
     <script src="app.js"></script>
 </body>
 

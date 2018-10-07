@@ -1,31 +1,15 @@
-$bg-color: #f0f5f9;
-$color-primary: #52616a;
-$color-secondary: #1e2022;
-
-*::before,
-*::after,
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Courier New", Courier, monospace;
-  background: $bg-color;
-}
+@import "base";
 
 .title {
   font-size: 4rem;
   color: $color-primary;
+  text-align: center;
+  margin-top: 2rem;
   @media only screen and (max-width: 30em) {
     text-align: center;
     font-size: 3.5rem;
     width: min-content;
+    margin: 0 auto;
   }
 }
 
@@ -67,4 +51,23 @@ body {
 
 .pick-js {
   transform: scale(1.2) rotate(10deg);
+}
+
+.scoreboard {
+  margin: 8rem auto;
+  font-size: 3rem;
+  @media only screen and(max-width: 30em) {
+    display: none;
+  }
+}
+
+.scoreboard,
+.scoreboard th,
+.scoreboard td {
+  border: 1px solid #333;
+}
+
+.player,
+.computer {
+  font-weight: 600;
 }

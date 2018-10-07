@@ -19,6 +19,8 @@ body {
 .title {
   font-size: 4rem;
   color: #52616a;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 @media only screen and (max-width: 30em) {
@@ -28,6 +30,7 @@ body {
     width: -webkit-min-content;
     width: -moz-min-content;
     width: min-content;
+    margin: 0 auto;
   }
 }
 
@@ -89,5 +92,27 @@ body {
 .pick-js {
   -webkit-transform: scale(1.2) rotate(10deg);
           transform: scale(1.2) rotate(10deg);
+}
+
+.scoreboard {
+  margin: 8rem auto;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 30em) {
+  .scoreboard {
+    display: none;
+  }
+}
+
+.scoreboard,
+.scoreboard th,
+.scoreboard td {
+  border: 1px solid #333;
+}
+
+.player,
+.computer {
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */

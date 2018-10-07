@@ -1,7 +1,15 @@
 (function() {
+  "use strict";
+
   // 'Global' variables:
   const choices = document.querySelectorAll(".choice");
   const outcome = document.querySelector(".outcome");
+  const playerWinScore = document.querySelector("#p-win");
+  const computerWinScore = document.querySelector("#c-win");
+  const playerLoseScore = document.querySelector("#p-lose");
+  const computerLoseScore = document.querySelector("#c-lose");
+  const playerTieScore = document.querySelector("#p-tie");
+  const computerTieScore = document.querySelector("#c-tie");
 
   // This will prevent user from spamming choices
   let userTurn = true;
@@ -28,8 +36,9 @@
           // 5. Set response of promise to paragraph
           .then(response => (outcome.textContent = response))
           // 6. Remove message
-          .then(() => {
-            myPromise(clearPara, 1500);
+          // Need to make async function since user can pick even before myPromise resolves
+          .then(async () => {
+            await myPromise(clearPara, 2000);
             // 7. Allow user to make another choice
             userTurn = true;
           });
@@ -57,18 +66,25 @@
 
   function calcWinner(usrChoice, cmpChoice) {
     if (usrChoice === cmpChoice) {
+      displayTieScore();
       return `Players ${usrChoice} and Computers ${cmpChoice} are the same... It's a Tie!`;
     } else if (usrChoice === "scissors" && cmpChoice === "paper") {
+      displayPlayerWinningScore();
       return `Players ${usrChoice} beats Computers ${cmpChoice}... Player wins!`;
     } else if (cmpChoice === "scissors" && usrChoice === "paper") {
+      displayComputerWinningScore();
       return `Computers ${cmpChoice} beats Players ${usrChoice}... Computer wins!`;
     } else if (usrChoice === "paper" && cmpChoice === "rock") {
+      displayPlayerWinningScore();
       return `Players ${usrChoice} beats Computers ${cmpChoice}... Player wins!`;
     } else if (cmpChoice === "paper" && usrChoice === "rock") {
+      displayComputerWinningScore();
       return `Computers ${cmpChoice} beats Players ${usrChoice}... Computer wins!`;
     } else if (usrChoice === "rock" && cmpChoice === "scissors") {
+      displayPlayerWinningScore();
       return `Players ${usrChoice} beats Computers ${cmpChoice}... Player wins!`;
     } else if (cmpChoice === "rock" && usrChoice === "scissors") {
+      displayComputerWinningScore();
       return `Computers ${cmpChoice} beats Players ${usrChoice}... Computer wins!`;
     }
   }
@@ -78,12 +94,24 @@
   }
 
   function loadingWinner() {
-    outcome.textContent = "Calculating winner....";
+    outcome.textContent = "Calculating winner...";
   }
 
   function clearPara() {
     while (outcome.firstChild) {
       outcome.firstChild.remove();
     }
+  }
+  function displayPlayerWinningScore() {
+    playerWinScore.textContent++;
+    computerLoseScore.textContent++;
+  }
+  function displayComputerWinningScore() {
+    computerWinScore.textContent++;
+    playerLoseScore.textContent++;
+  }
+  function displayTieScore() {
+    playerTieScore.textContent++;
+    computerTieScore.textContent++;
   }
 })();

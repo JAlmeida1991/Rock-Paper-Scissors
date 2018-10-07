@@ -1,0 +1,20 @@
+$bg-color: #f0f5f9;
+$color-primary: #52616a;
+$color-secondary: #1e2022;
+
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: $bg-color;
+}

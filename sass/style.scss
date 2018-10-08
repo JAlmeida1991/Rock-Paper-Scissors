@@ -30,7 +30,7 @@
   color: $color-secondary;
   @media only screen and (max-width: 30em) {
     margin-bottom: 2rem;
-    font-size: 8rem;
+    font-size: 9rem;
   }
   &:hover {
     color: $color-primary;
@@ -67,7 +67,23 @@
   border: 1px solid #333;
 }
 
+.scoreboard {
+  width: 45rem;
+}
+
 .player,
 .computer {
   font-weight: 600;
+}
+
+.player {
+  background-color: #cfd8dc;
+}
+
+.computer {
+  background-color: #bdbdbd;
+}
+
+th {
+  background-color: #b0bec5;
 }

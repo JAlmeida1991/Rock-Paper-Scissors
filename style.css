@@ -18,7 +18,7 @@ body {
 
 .title {
   font-size: 4rem;
-  color: #52616a;
+  color: #333;
   text-align: center;
   margin-top: 2rem;
 }
@@ -60,18 +60,18 @@ body {
 .choice {
   cursor: pointer;
   font-size: 12rem;
-  color: #1e2022;
+  color: #000;
 }
 
 @media only screen and (max-width: 30em) {
   .choice {
     margin-bottom: 2rem;
-    font-size: 8rem;
+    font-size: 9rem;
   }
 }
 
 .choice:hover {
-  color: #52616a;
+  color: #333;
 }
 
 .outcome {
@@ -79,7 +79,7 @@ body {
   margin-top: 8rem;
   text-align: center;
   font-size: 3rem;
-  color: #52616a;
+  color: #333;
 }
 
 @media only screen and (max-width: 30em) {
@@ -111,8 +111,24 @@ body {
   border: 1px solid #333;
 }
 
+.scoreboard {
+  width: 45rem;
+}
+
 .player,
 .computer {
   font-weight: 600;
+}
+
+.player {
+  background-color: #cfd8dc;
+}
+
+.computer {
+  background-color: #bdbdbd;
+}
+
+th {
+  background-color: #b0bec5;
 }
 /*# sourceMappingURL=style.css.map */

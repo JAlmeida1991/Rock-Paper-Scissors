@@ -1,0 +1,12 @@
+.title {
+  font-size: 4rem;
+  color: darken($color-primary, 10%);
+  text-align: center;
+  margin-top: 2rem;
+  @media only screen and (max-width: 30em) {
+    text-align: center;
+    font-size: 3.5rem;
+    width: min-content;
+    margin: 0 auto;
+  }
+}

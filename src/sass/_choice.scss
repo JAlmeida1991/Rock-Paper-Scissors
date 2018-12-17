@@ -1,0 +1,12 @@
+.choice {
+  cursor: pointer;
+  font-size: 12rem;
+  color: $color-secondary;
+  @media only screen and (max-width: 30em) {
+    margin-bottom: 2rem;
+    font-size: 8.5rem;
+  }
+  &:hover {
+    color: $color-primary;
+  }
+}

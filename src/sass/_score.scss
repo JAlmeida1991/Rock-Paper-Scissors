@@ -1,0 +1,31 @@
+.scoreboard {
+  margin: 8rem auto;
+  font-size: 3rem;
+  width: 45rem;
+  @media only screen and(max-width: 30em) {
+    display: none;
+  }
+}
+
+.scoreboard,
+.scoreboard th,
+.scoreboard td {
+  border: 1px solid #333;
+}
+
+.player,
+.computer {
+  font-weight: 600;
+}
+
+.player {
+  background-color: #cfd8dc;
+}
+
+.computer {
+  background-color: #bdbdbd;
+}
+
+th {
+  background-color: #b0bec5;
+}

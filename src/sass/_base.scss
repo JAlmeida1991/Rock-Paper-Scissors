@@ -1,17 +1,14 @@
-$bg-color: #f0f5f9;
-$color-primary: #333;
-$color-secondary: #000;
-
 *::before,
 *::after,
 * {
-  box-sizing: border-box;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {

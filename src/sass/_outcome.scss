@@ -1,0 +1,12 @@
+.outcome {
+  font-weight: 900;
+  margin-top: 8rem;
+  text-align: center;
+  font-size: 3rem;
+  color: darken($color-primary, 10%);
+  padding: 1rem;
+  @media only screen and (max-width: 30em) {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+  }
+}

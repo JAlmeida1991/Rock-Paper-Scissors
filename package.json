@@ -1,0 +1,21 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/JAlmeida1991/Rock-Paper-Scissors.git",
+  "author": "Jonathan Almeida <jalmeida0291@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.4.3",
+    "node-sass": "^4.11.0",
+    "parcel-bundler": "^1.10.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.1",
+    "regenerator-runtime": "^0.13.1"
+  },
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  }
+}
